@@ -47,7 +47,7 @@ export function ShoppingCardProvider( {children} : ShoppingCardProviderProps){
     }
     function increaseCardQuantity(id: number){
         setCardItems(currItems => {
-            if(currItems.find(item => item.id === id) === null)
+            if(currItems.find(item => item.id === id) == null)
                 return [...currItems, {id, quantity: 1}];
             else {
                 return currItems.map(item => {
